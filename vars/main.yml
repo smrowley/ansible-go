@@ -1,0 +1,4 @@
+---
+# vars file for ansible-go
+
+download_root_url: https://dl.google.com/go

@@ -1,0 +1,18 @@
+---
+# tasks file for ansible-go
+
+- name: Download go tarball
+  get_url:
+    url: "{{ download_url }}"
+    dest: /usr/local/src/{{ tarball_name }}
+    checksum: sha256:{{ download_checksum }}
+
+- name: Install go binaries
+  unarchive:
+    src: /usr/local/src/{{ tarball_name }}
+    dest: /usr/local
+
+- name: Add profiled scripts
+  copy:
+    src:
+    dest:

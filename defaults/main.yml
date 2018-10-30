@@ -1,0 +1,8 @@
+---
+# defaults file for ansible-go
+
+
+go_version: 1.11.1
+tarball_name: go{{ go_version }}.linux-amd64.tar.gz
+download_url: "{{ download_root_url }}/{{ tarball_name }}"
+download_checksum: 2871270d8ff0c8c69f161aaae42f9f28739855ff5c5204752a8d92a1c9f63993
